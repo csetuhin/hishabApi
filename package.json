@@ -1,0 +1,22 @@
+{
+  "name": "sql_basic",
+  "version": "1.0.0",
+  "description": "SQL Basic Conection and data read write",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "REST",
+    "SQL"
+  ],
+  "author": "Mahbubul Hasan Tuhin",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mssql": "^9.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
