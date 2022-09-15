@@ -2,9 +2,8 @@ const sql = require('mssql')
 const sqlCon = require('./sqlConnection')
 
 // Async Await
-
+var brCode, rs
 async function getData() {
-var result, rs
 rs = 0
     try {
         let pool = await sql.connect(sqlCon)

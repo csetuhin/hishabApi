@@ -41,8 +41,8 @@ const hishabStatus = async function(req, res) {
         console.log(err.message)
         sql.close
     })
-}
-else if (req.body.reportType == 'savingsStatus') {
+    }
+    else if (req.body.reportType == 'savingsStatus') {
     sql.connect(sqlCon).then( pool =>{
         return pool
         .request()
@@ -59,8 +59,8 @@ else if (req.body.reportType == 'savingsStatus') {
         console.log(err.message)
         sql.close
     })
-}
-else if (req.body.reportType == 'lastTransaction'){
+    }
+    else if (req.body.reportType == 'lastTransaction'){
     let sbStatus, lnStatus
     try{
         let pool = await sql.connect(sqlCon)
@@ -131,8 +131,8 @@ else if (req.body.reportType == 'lastTransaction'){
         sql.close()
     }
 
-}
-else {
+    }
+    else {
     res.status(403).json({
         message: 'Invalid request'
     })
