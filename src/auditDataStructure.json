@@ -1,0 +1,47 @@
+﻿{ //Object_1_Start >>>
+   "timestamp":"2022-08-29T14:51:03.226Z",
+   "orgId":"123",
+   "organizationName":"xyz",
+   "organizationType":"MFI",
+   "customers":[ //Array_1_Start >>>
+	{ //Object_2_Start
+	  "customerId":"cf912ba3-4151-4071-a29d-1ceb6ed88519",
+          "customerType":"BO",
+          "phoneNumber":"8801676064795",
+          "transactionInfo":{//Object_3_Start
+          "transactionId":"0x8ac173a5cc63544e",
+          "transactionDate":"2020-03-31T00:00:00",
+	"loanStatus":[//Array_2_Start
+               {//Object_4_Start
+                  "product":"জাগিণ",
+                  "loanInstallment":1000.00,
+                  "serviceCharge":250.00
+               //Object_4_End
+		         },
+               {//Object_5_Start
+                  "product":"আইরজএএ ",
+                  "loanInstallment":5000.00,
+                  "serviceCharge":500.00
+		//Object_5_End
+               }
+	//Array_2_End           
+ 		],
+	"savingStatus":[//Array_3_Start
+               {
+                  "product":"রভ এস",
+                  "installment":100.00
+               },
+               {
+                  "product":"রজ এস",
+                  "installment":100.00
+               },
+               {
+                  "product":"এলটিএস",
+                  "installment":100.00
+               }
+        //Array_3_End    
+	]
+	} //Object_3_End
+      } //Object_2_End
+    ]// Array_1_End
+  } //Object_1_End

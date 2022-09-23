@@ -79,6 +79,14 @@ const sqlQuerys = {
         Left Join D020004 b on a.LBrCode = b.LBrCode And SubString(a.PrdAcctId,1,24) = SubString(b.PrdAcctId,1,24) and b.MainBalFcy <> 0
         Where a.LBrCode = @BrCode And a.CustNo = @CustNo
         And a.AcctStat In (1,2)
+    `,
+    testDataPass:
+    `
+    Select Top 100 RTrim(MobileNo_1) MobileNo From v_Client Where Len(MobileNo_1) = 11 Order by CustNo Desc
+    `,
+    testDataStream:
+    `
+    Select Top 2 RTrim(MobileNo_1) MobileNo From v_Client Where MobileNo_1 In ('01322800925','01322800975') Order by CustNo Desc
     `
 }
 

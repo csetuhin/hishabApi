@@ -1,12 +1,11 @@
+require('dotenv').config()
 const express = require('express')
 const router = express.Router()
-const app = express()
-const loanStatusController = require('../controllers/hishabStatus')
 const testController = require('../controllers/hishabStatusProcess')
-app.use(express.json())
+const dataPassController = require('../controllers/streamPost')
 
-
-router.get('/udpn',  loanStatusController.hishabStatus)
-router.get('/test', testController.hishabStatus)
+router.get('/mfi/udpn', testController.hishabStatus)
+router.get('/mfi/udpn/passData', dataPassController.dataPass)
+router.get('/mfi/udpn/auditData', dataPassController.auditDataPass)
 
 module.exports = router

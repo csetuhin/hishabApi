@@ -1,7 +1,6 @@
 const sql = require('mssql')
 const sqlCon = require('./sqlConnection')
 const sqlQuerys = require('./querys')
-const { savingsStatus } = require('./querys')
 
 const hishabStatus = async function(req, res) {
     var custNo, brCode, trnxDate
@@ -114,7 +113,7 @@ const hishabStatus = async function(req, res) {
             totalTransaction
         })
     }
-    if(sbStatus.length > 0 && lnStatus.length <= 0){
+    else if(sbStatus.length > 0 && lnStatus.length <= 0){
         res.status(200).json({
             transactonDate:rsDate,
             savingsStatus: sbStatus,
